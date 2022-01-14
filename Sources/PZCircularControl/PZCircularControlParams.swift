@@ -37,7 +37,7 @@ open class PZCircularControlParams<InnerBackgoundType: ShapeStyle,
         font: Font = .largeTitle,
         initialValue: CGFloat = 0.0,
         textFormatter: @escaping ((CGFloat) -> String) = { progress in
-            "\(Int(progress * 100))%"
+            String(format: "%.2f", progress * 100.0)
         },
         overlayView: AnyView? = nil
     ) {
